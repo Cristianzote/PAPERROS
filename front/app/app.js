@@ -9,7 +9,7 @@ import { loginRouter } from "./routes/login.routes.js";
 import dash from "./routes/dashboard.routes.js"
 import passport from "passport";
 import cookieparser from "cookie-parser";
-import "./middlewares/google.js"
+import "./config/middlewares/google.js"
 dotenv.config();
 
 //INICIALIZACION
@@ -28,6 +28,7 @@ app.use("/",home);
 app.use(passport.initialize());
 app.use(cookieparser());
 
+//RUTAS
 app.use("/v1", dash);
 app.get("/", (req, res)=>{
     res.render("home");
