@@ -9,6 +9,18 @@ home.get("/", (req, res)=>{
     });
 });
 home.get("/contacto", (req, res)=>{
+    /*let ruta = "http://localhost:3000/api/getUsers";
+    let info = {};
+
+    const result = fetch(ruta)
+    .then(res => res.json())
+    .then(data => {
+        info = data;
+    })
+
+    console.log(info);*/
+
+
     res.render("contacto", {
         "titulo":"Contacto", 
         "activo":2

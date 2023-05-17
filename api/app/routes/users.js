@@ -13,6 +13,7 @@ router.get('/getUser/', userController.getUser);
 
 // U PUT
 router.put('/updateUser/', userController.updateUser);
+router.put('/addDog/', userController.addDog);
 
 // D Delete
 router.delete('/deleteUser/', userController.deleteUser);
