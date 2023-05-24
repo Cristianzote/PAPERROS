@@ -2,6 +2,7 @@ import message from '../config/message';
 import { /*db,*/ initFirebase } from '../config/database/firebase';
 const db = require('../config/database/firebase');
 var admin = require("firebase-admin");
+import jwt from "jsonwebtoken";
 
 // Inicializar Firebase
 initFirebase;
@@ -201,6 +202,26 @@ export const deleteUser = async(req, res) => {
     } catch (error) {
         message(error.message, "danger");
         res.status(500);
+    }
+}
+
+export const isValidToken = (req, res, next) => {
+    
+    // const tokenClient = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJMVUlTIEJFQ0VSUlJBIiwiaWQiOiIxMDQyMzc2MjAxNDg2MTQ0MTA0NDQiLCJlbWFpbCI6ImVsaW5nZW5pZXJvcHJvZmVzb3JAZ21haWwuY29tIiwiaWF0IjoxNjgwMDQzMTQ1LCJleHAiOjE2ODAwNDY3NDV9.CN8oJ3L2Gbc4-HYf9-T2-zTFEyeTMDLe0y4bLAPmGlM";
+    const tokenClient = req.cookies.eib_per;
+    // console.log(req.cookie);
+    try {
+        jwt.verify(tokenClient, process.env.SECRET_KEY, (err, decoded) => {
+            if (!err) {
+                // res.send("todo bien");
+                next();
+            } else {
+                res.send({ "error": "El token es errado o ha caducado " })
+            }
+            // console.log(err);
+        })   
+    } catch (error) {
+        res.send({ "error": "El token es errado o ha caducado " })
     }
 }
 
