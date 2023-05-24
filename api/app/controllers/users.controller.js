@@ -167,7 +167,7 @@ export const addDog = async(req, res) => {
             }
           }
         
-        // Declarar collección
+        // Declarar collecciónes
         const usuariosRef = db.collection('usuario');
 
         // Declarar documento y actualizar los campos con los datos del usuario
