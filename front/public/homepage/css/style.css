@@ -14,6 +14,97 @@
     margin-left: 0;
 }
 
+@font-face {
+    font-family: "CormorantBold";
+    src: url("../fonts/Cormorant-Bold.ttf");
+}
+
+@font-face {
+    font-family: "CormorantMedium";
+    src: url("../fonts/Cormorant-Medium.ttf");
+}
+
+@font-face {
+    font-family: "CormorantLight";
+    src: url("../fonts/Cormorant-Light.ttf");
+}
+
+h1{
+    font-family: "CormorantBold";
+}
+
+h2{
+    font-family: "CormorantMedium";
+    font-weight: 400;
+    font-style: normal;
+}
+
+p{
+    font-family: "CormorantLight";
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aBoton{
+    font-family: "CormorantLight";
+    font-weight: 400;
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ab6033;
+    color: white;
+    text-decoration: none;
+    border-radius: 26px
+}
+
+.aBoton:hover{
+    color: rgb(0, 0, 0);
+}
+
+.aTitulo{
+    font-family: "CormorantLight";
+    font-weight: 400;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #ab6033;
+    font-size: 26.6667px;
+}
+
+.h1titulo{
+    font-family: "CormorantLight";
+    font-weight: 400;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #ab6033;
+    font-size: 26.6667px;
+}
+
+.aBarra{
+    font-family: "CormorantLight";
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.aFooter{
+    font-family: "CormorantLight";
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.FondoDiv{
+    background-color: #f8f6f4;
+}
+
+.aBarra:hover{
+    color:#ab6033;
+}
 .btn {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
@@ -113,9 +204,9 @@
 }
 
 .hero-header {
-    background: url(../img/hero.jpg) top right no-repeat;
-    background-size: cover;
+    background: url(../img/BULLDOGFOTO.png) top right/cover no-repeat;
 }
+
 
 .btn-play {
     position: relative;

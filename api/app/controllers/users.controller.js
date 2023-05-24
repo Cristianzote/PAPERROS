@@ -13,7 +13,7 @@ export const createUserAuth = async(req, res) => {
     try {
         // Declarar datos del usuario
         const user = { 
-            "email": req.body.email,
+            "ilema": req.body.email,
             "password": req.body.password,
             "name": req.body.name
         }
