@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+<link href="homepage/css/login.css" rel="stylesheet">
 
-    <link href="homepage/css/login.css" rel="stylesheet"> 
+<%- include("./partials/head.ejs"); %>
 
-    <%- include("./partials/head.ejs"); %>
-<body>
-    
-    <%- include("./partials/menu.ejs"); %>
-    
-    <br>
-    <br>
-    <div class="container">
-        <div class="screen">
-            <div class="screen__content">
-                <form class="login">
-                    <div class="login__field">
-                        <i class="login__icon fas fa-user"></i>
-                        <input type="text" class="login__input" placeholder="Correo electronico">
-                    </div>
-                    <div class="login__field">
-                        <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" placeholder="Contraseña">
-                    </div>
-                    <button class="button login__submit">
-                        <span class="button__text">Ingresar</span>
-                        <i class="button__icon fas fa-chevron-right"></i>
-                    </button>				
-                </form>
-                <div class="social-login">
-                    <h3>Ingresa con:</h3>
-                    <div class="social-icons">
-                        <a href="http://localhost:3000/auth/google">
-                            <img src="homepage/img/iconogoogle.png" width="40px" height="40px" alt="">
-                        </a>
-                    </div>
-                    <a href="/Registro">
-                        <h4>Registrate</h4>
-                    </a>
+    <body>
+
+        <%- include("./partials/menu.ejs"); %>
+
+            <div class="container">
+                <div class="login-form">
+                    <h2>Iniciar Sesión</h2>
+                    <p>Ingresa tus datos para iniciar sesion</p>
+                    <form>
+                        <div class="form-field">
+                            <label for="username">Correo electronico:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" required> 
+                        </div>
+                        <div class="form-field">
+                            <label>
+                                <input type="checkbox" id="remember" name="remember"> Recordar sesión
+                            </label>
+                        </div>
+                        <div class="form-field">
+                            <button type="submit">Ingresar</button>
+                        </div>
+                        <div class="form-field">
+                                <a href="/http://localhost:3000/auth/google" class="center-block">
+                                <img src="homepage/img/iconogoogle.png" width="40px" height="40px" alt="">
+                                </a>
+                        </div>
+                        <div class="signup-link">
+                            ¿No tienes una cuenta? <a href="/Registro">
+                                <p>Registrate</p>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <div class="image-container">
+                    <img src="homepage/img/CachorritosPradera.jpg"" alt=" Imagen">
                 </div>
             </div>
-            <div class="screen__background">
-                <span class="screen__background__shape screen__background__shape4"></span>
-                <span class="screen__background__shape screen__background__shape3"></span>		
-                <span class="screen__background__shape screen__background__shape2"></span>
-                <span class="screen__background__shape screen__background__shape1"></span>
-            </div>		
-        </div>
-    </div>    
-    <br>
 
-    <%- include("./partials/footer.ejs"); %>
-    
-</body>
+            <%- include("./partials/footer.ejs"); %>
+
+    </body>
+
 </html>
-

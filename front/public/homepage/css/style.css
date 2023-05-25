@@ -45,6 +45,15 @@ p{
     font-style: normal;
 }
 
+.bgPaseadores{
+    background: url(../img/offer.jpg) top right no-repeat;
+}
+
+.MargenSuperiorDivCarrousel{
+    margin-top: 320px;
+    clear: both;
+}
+
 .aBoton{
     font-family: "CormorantLight";
     font-weight: 400;
@@ -113,7 +122,7 @@ p{
 }
 
 .btn-primary {
-    color: #FFFFFF;
+    color: #000000;
 }
 
 .btn-square {
@@ -204,7 +213,7 @@ p{
 }
 
 .hero-header {
-    background: url(../img/BULLDOGFOTO.png) top right/cover no-repeat;
+    background: url(../img/BULLDOGFOTO.png) top right/contain no-repeat;
 }
 
 
@@ -476,11 +485,6 @@ p{
     opacity: 1;
 }
 
-.bg-testimonial {
-    background: url(../img/testimonial.jpg) top left no-repeat;
-    background-size: cover;
-}
-
 .testimonial-carousel .owl-nav {
     position: absolute;
     width: 100%;
@@ -500,8 +504,8 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
-    background: var(--primary);
+    color: #a97c62;
+    background: #dfe5dc;
     font-size: 22px;
     transition: .5s;
 }
