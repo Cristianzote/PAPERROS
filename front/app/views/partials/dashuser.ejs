@@ -49,15 +49,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
+                  <% usuario.forEach((element)=>{ %>
+                    <tr>
+                      <td><%= element.municipio %></td>
+                      <td><%= element.nombre %>
+                      </td>
+                      <td>
+                        <a type="button" href="usuario-edit?id=<%= element.municipio %>&name=<%= element.nombre %>"><i class="fa fa-edit btn btn-warning "></i></a>
+                        <a type="button" href="usuario-edit?id=<%= element.municipio %>"><i class="fa fa-trash btn btn-danger"></i></a>
+                      </td>
+                    </tr>
+                  <% }) %>
                 </tbody>
                 <tfoot>
                 <tr>

@@ -9,13 +9,13 @@ router.post('/userReg/', /*userController.isValidToken,*/ userController.createU
 
 // R GET
 router.get('/getUsers/', /*userController.isValidToken,*/ userController.getUsers);
-router.get('/getUser/', /*userController.isValidToken,*/ userController.getUser);
+router.get('/getUser/:id', /*userController.isValidToken,*/ userController.getUser);
 
 // U PUT
 router.put('/updateUser/', /*userController.isValidToken,*/ userController.updateUser);
 router.put('/addDog/', /*userController.isValidToken,*/ userController.addDog);
 
 // D Delete
-router.delete('/deleteUser/', /*userController.isValidToken,*/ userController.deleteUser);
+router.delete('/deleteUser/:id', /*userController.isValidToken,*/ userController.deleteUser);
 
 export default router;

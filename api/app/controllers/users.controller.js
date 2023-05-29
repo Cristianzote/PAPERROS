@@ -1,5 +1,6 @@
 import message from '../config/message';
-import { /*db,*/ initFirebase } from '../config/database/firebase';
+import { arrayUnion, arrayRemove } from "firebase/firestore";
+import { initFirebase } from '../config/database/firebase';
 const db = require('../config/database/firebase');
 var admin = require("firebase-admin");
 import jwt from "jsonwebtoken";
@@ -97,6 +98,7 @@ export const getUser = async(req, res) => {
     try {
         // Declarar datos del usuario
         const id = req.body.id ?? "none";
+        console.log(id);
         // Declarar colección
         const result = db.collection('usuario').doc(id);
         const doc = await result.get();
@@ -162,19 +164,22 @@ export const addDog = async(req, res) => {
         // Declarar datos del usuario
         const user = {
             "id": req.body.id,
-            "perros": {
-                "id_perro": req.body.id_perro,
-                "nombre_perro": req.body.nombre_perro
-            }
+            /*"perros": {
+                "id_perro": req.body.perros.id_perro,
+                "nombre_perro": req.body.perros.nombre_perro
+            }*/
+            perros: req.body.perros
           }
         
         // Declarar collecciónes
         const usuariosRef = db.collection('usuario');
 
-        // Declarar documento y actualizar los campos con los datos del usuario
-        const result = await usuariosRef.doc(user.id).update({
-            perros: db.FieldValue.arrayUnion(user.perros),
-            
+        //Declarar documento y actualizar los campos con los datos del usuario
+        const result = await usuariosRef.doc("Cristiancito").update({
+            perros: [user.perros] 
+            //perros: arrayUnion("otro perrito")
+        },{
+            merge: true
         });
 
          res.json(result);
@@ -189,7 +194,7 @@ export const addDog = async(req, res) => {
 export const deleteUser = async(req, res) => {
     try {
         // Datos del usuario
-        const user = { "id": req.body.id}
+        const user = { "id": req.params.id}
         
         // Declarar la colección
         const usuariosRef = db.collection('usuario');

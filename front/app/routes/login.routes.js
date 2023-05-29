@@ -12,13 +12,14 @@ loginRouter.get("/google", (req, res) => {
         "nombre" : req.user.displayName,
         "id" : req.user.id,
         "email": req.user.emails[0].value,
-        "photo": req.user.photos[0].value
+        "foto": req.user.photos[0].value
     };
     let token = jwt.sign(data, process.env.SECRET_KEY,{ "expiresIn": process.env.EXPIRE_TOKEN});
 
-    let timeExpireCookie = 3000 * 60 * process.env.EXPIRE_COOKIE;
+    //TODO: Arreglar seed del token
+    //let timeExpireCookie = 1000 * 60 * 5000 * process.env.EXPIRE_COOKIE;
 
-    res.cookie("token", token, {"maxAge": timeExpireCookie });
+    res.cookie("token", token/*, {"maxAge": timeExpireCookie }*/);
 
     res.redirect("/v1/");
 });

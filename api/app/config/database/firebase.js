@@ -1,5 +1,5 @@
 //Funciones de Firebase: App y Firestore
-import { initializeApp, cert } from 'firebase-admin/app';
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 import { credential as _credential } from "firebase-admin";
 
