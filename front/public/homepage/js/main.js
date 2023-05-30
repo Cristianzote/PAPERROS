@@ -91,11 +91,12 @@
 
     // Team carousel
     $(".team-carousel").owlCarousel({
-        autoplay: true,
+        autoplay: false,
         smartSpeed: 1000,
         margin: 45,
+        items: 3,
         dots: false,
-        loop: true,
+        loop: false,
         nav : true,
         navText : [
             '<i class="bi bi-arrow-left"></i>',
