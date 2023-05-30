@@ -1,6 +1,6 @@
 //Funciones de Firebase: App y Firestore
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
+const { getFirestore, getStorage, Timestamp, FieldValue } = require('firebase-admin/firestore');
 import { credential as _credential } from "firebase-admin";
 
 import serviceAccount from "./creds.json";
@@ -22,6 +22,7 @@ const firebaseConfig = {
 // Iniciar servicios de Firebase
 const initFirebase = initializeApp(firebaseConfig);
 const db = getFirestore();
+const storage = getFirestore();
 
 // Exportar las funciones de Firebase
 module.exports = db;

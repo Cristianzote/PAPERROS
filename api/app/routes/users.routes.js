@@ -12,7 +12,7 @@ router.get('/getUsers/', /*userController.isValidToken,*/ userController.getUser
 router.get('/getUser/:id', /*userController.isValidToken,*/ userController.getUser);
 
 // U PUT
-router.put('/updateUser/', /*userController.isValidToken,*/ userController.updateUser);
+router.put('/updateUser/:id', /*userController.isValidToken,*/ userController.updateUser);
 router.put('/addDog/', /*userController.isValidToken,*/ userController.addDog);
 
 // D Delete

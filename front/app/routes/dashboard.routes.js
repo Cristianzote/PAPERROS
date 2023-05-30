@@ -77,7 +77,7 @@ dash.get("/users", async (req, res)=>{
                 res.render("dashboard",{
                 "nombre": nombre,
                 "foto": foto,
-                "mnu":2
+                "mnu":2,
             });
         } catch (error){
             res.redirect("/Ingresa")
