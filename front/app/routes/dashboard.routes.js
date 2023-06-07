@@ -19,7 +19,7 @@ dash.get("/", async(req, res)=>{
                 let email = token.email;
                 let id = token.id;
                 
-                let ruta = "http://localhost:3001/api/getUsers";
+                let ruta = process.env.API + "getUsers";
                 const result = await fetch(ruta);
                 const data = await result.json();
 
@@ -29,7 +29,7 @@ dash.get("/", async(req, res)=>{
                 console.log(email);
                 console.log(id);
 
-                res.render("dashboard",{
+                res.render("dashViews/dashboard",{
                 "nombre": nombre,
                 "foto": foto,
                 //Cambiar esto a 0 luego
@@ -74,7 +74,7 @@ dash.get("/users", async (req, res)=>{
                 //console.log(id);
 
                 console.log(info);
-                res.render("dashboard",{
+                res.render("dashViews/dashboard",{
                 "nombre": nombre,
                 "foto": foto,
                 "mnu":2,
