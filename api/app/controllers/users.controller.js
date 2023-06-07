@@ -1,5 +1,6 @@
 import message from '../config/message';
 import { arrayUnion, arrayRemove } from "firebase/firestore";
+import { getStorage, ref, uploadBytes } from "firebase/storage";
 import { initFirebase } from '../config/database/firebase';
 const db = require('../config/database/firebase');
 var admin = require("firebase-admin");
@@ -33,22 +34,35 @@ export const createUserAuth = async(req, res) => {
 // Registrar el nuevo usuario en la base de datos
 export const createUserDb = async(req, res) => {
     try {
+
         // Declarar datos del usuario
         const user = {
             "id": req.body.id,
             "nombre": req.body.nombre,
             "apellidos": req.body.apellidos,
             "calificacion_paseador": 0,
-            "calificacion_dueno": 0,
             "municipio": req.body.municipio,
             "direccion": req.body.direccion,
             "telefono": req.body.telefono,
             "edad": req.body.edad,
             "pais": req.body.pais,
             "perros": [],
-            "chats": []
-          }
-        
+            "chats": [],
+            "metodos_de_pago": {
+                "bancolombia": req.body.bancolombia ,
+                "bancolombia_qr": req.body.bancolombia_qr,
+                "nequi": req.body.nequi,
+                "nequi_qr": req.body.nequi_qr
+            }
+        }
+
+        const storageRef = ref(getStorage, `usuarios/${user.id}`);
+        const fileBytes = req.body.file; // Replace with the actual file bytes
+        await uploadBytes(storageRef, fileBytes);
+
+        // Obtener la ruta del archivo
+        const fileUrl = await getDownloadURL(storageRef);
+            
         //Declarar colección
         const usuariosRef = db.collection('usuario');
 
@@ -57,14 +71,15 @@ export const createUserDb = async(req, res) => {
             nombre: user.nombre,
             apellidos: user.apellidos,
             calificacion_paseador: user.calificacion_paseador,
-            calificacion_dueno: user.calificacion_dueno,
             municipio: user.municipio,
             direccion: user.direccion,
             telefono: user.telefono,
             edad: user.edad,
             pais: user.pais,
             perros: user.perros,
-            chats: user.chats
+            chats: user.chats,
+            metodos_de_pago: user.metodos_de_pago,
+            img: fileUrl
         });
 
          res.json(result);
@@ -128,11 +143,20 @@ export const updateUser = async(req, res) => {
             "id": req.body.id,
             "nombre": req.body.nombre,
             "apellidos": req.body.apellidos,
+            //"calificacion_paseador": 0,
             "municipio": req.body.municipio,
             "direccion": req.body.direccion,
             "telefono": req.body.telefono,
             "edad": req.body.edad,
             "pais": req.body.pais
+            //"perros": [],
+            //"chats": [],
+            //"metodos_de_pago": {
+            //    "bancolombia": req.body.bancolombia ,
+            //    "bancolombia_qr": req.body.bancolombia_qr,
+            //    "nequi": req.body.nequi,
+            //     "nequi_qr": req.body.nequi_qr
+            //}
           }
         
         // Declarar collección
@@ -142,11 +166,15 @@ export const updateUser = async(req, res) => {
         const result = await usuariosRef.doc(user.id).update({
             nombre: user.nombre,
             apellidos: user.apellidos,
+            //calificacion_paseador: user.calificacion_paseador,
             municipio: user.municipio,
             direccion: user.direccion,
             telefono: user.telefono,
             edad: user.edad,
-            pais: user.pais
+            pais: user.pais,
+            //perros: user.perros,
+            //chats: user.chats,
+            metodos_de_pago: user.metodos_de_pago
         });
 
          res.json(result);
