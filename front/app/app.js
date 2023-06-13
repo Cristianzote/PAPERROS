@@ -4,13 +4,16 @@ import dotenv from "dotenv";
 import ejs from "ejs";
 import path from "path";
 import { fileURLToPath } from 'url';
-import home from "./routes/homepage.routes.js";
 import { loginRouter } from "./routes/login.routes.js";
-import dash from "./routes/dashboard.routes.js"
 import passport from "passport";
 import cookieparser from "cookie-parser";
 import "./config/middlewares/google.js"
 import bodyParser from "body-parser";
+//RUTAS
+import dashDuenos from "./routes/dashPaseadores.routes.js";
+import dashPaseadores from "./routes/dashDuenos.routes.js";
+import home from "./routes/homepage.routes.js";
+
 
 //INICIALIZACION
 dotenv.config();
@@ -31,7 +34,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //RUTAS
 app.use("/", home);
-app.use("/v1", dash);
+app.use("/v1/dueno/", dashDuenos);
+app.use("/v1/paseador/", dashPaseadores);
 app.get("/", (req, res)=>{
     res.render("home");
 });
