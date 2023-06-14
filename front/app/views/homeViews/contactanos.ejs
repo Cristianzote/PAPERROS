@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs"); %>
+
+<body>
+
+    <%- include("./partials/menu.ejs"); %>
+
+    <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h1 class="text-primary text-uppercase">Contactanos</h1>
+                <p class="fs-4 text-black mb-lg-4">¿Necesitas ayuda con algo? ¿Tienes alguna queja? Escribe lo que te sucede en este formulario</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Nombre completo" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control bg-light border-0 px-4" placeholder="Correo Electronico" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Asunto" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control bg-light border-0 px-4 py-3" rows="8" placeholder="Mensaje"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Enviar mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-light mb-5 p-5">
+                        <h6 class="text-primary text-uppercase">Otros medios de contacto</h6>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                            <div class="text-start">
+                                <h6 class="text-uppercase mb-1">Nuestras oficinas</h6>
+                                <span>Oficina principal, SENA Calatrava</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                            <div class="text-start">
+                                <h6 class="text-uppercase mb-1">Envianos un correo</h6>
+                                <span>Paperros@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                            <div class="text-start">
+                                <h6 class="text-uppercase mb-1">Llamanos</h6>
+                                <span>+57 313 664 0809</span>
+                            </div>
+                        </div>
+                        <div>
+                            <iframe class="position-relative w-100"
+                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.624483295141!2d-75.60856782533112!3d6.180989193806478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46823b07fa76e7%3A0xd858c9c2ddf4b118!2sSENA%20Complejo%20Sur%20Itag%C3%BC%C3%AD!5e0!3m2!1ses!2sco!4v1684982801092!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                frameborder="0" style="height: 205px; border:0;" allowfullscreen="" aria-hidden="false"
+                                tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <%- include("./partials/footer.ejs"); %>
+
+</body>
+
+</html>

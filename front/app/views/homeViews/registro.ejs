@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="homepage/css/login.css" rel="stylesheet">
+
+<%- include("./partials/head.ejs"); %>
+
+    <body>
+
+        <%- include("./partials/menu.ejs"); %>
+
+            <div class="container">
+                <div class="login-form">
+                    <h2>Registrate</h2>
+                    <p>Estas a solo pasos de ser parte de la comunidad paperros</p>
+                    <form>
+                        <div class="form-field">
+                            <label for="username">Correo electronico:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" required> 
+                        </div>
+                        <div class="form-field">
+                            <button type="submit">Ingresar</button>
+                        </div>
+                        <div class="signup-link">
+                            ¿Ya tienes una cuenta? <a href="/Ingresa">
+                                <p>Ingresa</p>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <div class="image-container">
+                    <img src="homepage/img/CachorritosPradera.jpg"" alt=" Imagen">
+                </div>
+            </div>
+
+            <%- include("./partials/footer.ejs"); %>
+
+    </body>
+
+</html>

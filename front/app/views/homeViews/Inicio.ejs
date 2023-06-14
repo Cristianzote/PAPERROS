@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs"); %>
+
+<body>
+
+    <%- include("./partials/menu.ejs"); %>
+
+    <div class="container-fluid bg-primary py-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-uppercase text-titulo mb-lg-4">PAPERROS</h1>
+                    <h2 class="text-blancosubtitulo">¡Paseos felices para perros <br>felices!</h2>
+                    <br>
+                    <p class="fs-4 text-parrafo mb-lg-4">Únete a nuestra comunidad de amantes de los perros <br>
+                        y disfruta de paseos divertidos y seguros <br>
+                        para tu mejor amigo peludo.</p>
+                    <a class="aBoton" href="/Ingresa">Ingresa</a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <!-- Testimonial Start -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-7 MargenSuperiorDivCarrousel">
+                    <h1 class="text-uppercase text-titulo mb-lg-4 text-center">¿Qué dicen nuestros clientes?</h1>
+                    <div class="owl-carousel testimonial-carousel bg-white p-5">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-4">
+                                <img class="img-fluid mx-auto" src="homepage/img/testimonial-1.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                                    <i class="bi bi-chat-square-quote text-primary"></i>
+                                </div>
+                            </div>
+                            <p>Desde que uso Paperros puedo dedicarle mas tiempo a mi trabajo en casa sin descuidar a mi mascota, 
+                                no me imagino ahora sin Paperros.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5 class="text-uppercase">Sofia Restrepo</h5>
+                            <span>Dueña</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-4">
+                                <img class="img-fluid mx-auto" src="homepage/img/testimonial-2.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+                                    <i class="bi bi-chat-square-quote text-primary"></i>
+                                </div>
+                            </div>
+                            <p>Con Paperros puedo ganar un ingreso extra mientras estoy 
+                                en compañia de mis animales preferidos.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5 class="text-uppercase">Cristian Ramirez</h5>
+                            <span>Paseador</span>
+                        </div>
+                        <!-- Agrega más testimonios aquí si es necesario -->
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial End -->
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <%- include("./partials/footer.ejs"); %>
+
+</body>
+</html>

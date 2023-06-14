@@ -1,0 +1,20 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-header navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+    <a href="/" class="aTitulo ms-lg-5">
+        <h1Titulo class="m-0 text-uppercase"> <img src="/homepage/img/LogoCirculo.png" height="60" width="60"></img>
+            PaPerros</h1Titulo>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="ms-auto py-0">
+            <a href="/" class=" aBarra <%= activo==1 ? 'active' : '' %>">Inicio</a>
+            <a href="/Acerca" class="aBarra <%= activo==2 ? 'active' : '' %>">Acerca</a>
+            <a href="/Servicios" class="aBarra <%= activo==3 ? 'active' : '' %>">Servicios</a>
+            <a href="/Paseadores" class="aBarra <%= activo==4 ? 'active' : '' %>">Paseadores</a>
+            <a href="/Contactanos" class="aBarra <%= activo==5 ? 'active' : '' %>">Contactanos</a>
+            <a href="/Ingresa" class="aBoton <%= activo==6 ? 'active' : '' %>">Ingresa</a>
+        </div>
+</nav>
+<!-- Navbar End -->

@@ -15,11 +15,30 @@ dash.get("/", (req, res)=>{
                 let nombre = token.nombre;
                 let foto = token.foto;
                 
+<<<<<<< Updated upstream
                 res.render("dashboard",{
                 "nombre": nombre,
                 "foto": foto,
                 "mnu":0
 
+=======
+                let ruta = process.env.API + "getUsers";
+                const result = await fetch(ruta);
+                const data = await result.json();
+
+                console.log(data);
+                console.log(nombre);
+                console.log(foto);
+                console.log(email);
+                console.log(id);
+
+                res.render("dashViews/MisPaseos",{
+                "nombre": nombre,
+                "foto": foto,
+                //Cambiar esto a 0 luego
+                "mnu":2,
+                "usuario": data
+>>>>>>> Stashed changes
             });
         } catch (error){
             res.redirect("/login")
@@ -28,6 +47,11 @@ dash.get("/", (req, res)=>{
         res.redirect("/login")
     }
 })
+
+dash.get("/MisPerros", (req, res)=>{
+    res.render("dashViews/MisPerros", {
+    });
+});
 
 dash.get("/salir", (req, res)=>{
     res.clearCookie("token");
@@ -52,8 +76,19 @@ dash.get("/users", async (req, res)=>{
                     info = data
                 })
 
+<<<<<<< Updated upstream
                 console.log(info);*/
                 res.render("dashboard",{
+=======
+                console.log(data);
+                console.log(nombre);
+                console.log(foto);
+                //console.log(email);
+                //console.log(id);
+
+                console.log(info);
+                res.render("dashViews/dashboard",{
+>>>>>>> Stashed changes
                 "nombre": nombre,
                 "foto": foto,
                 "mnu":2
