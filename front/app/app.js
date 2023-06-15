@@ -8,10 +8,8 @@ import { loginRouter } from "./routes/login.routes.js";
 import passport from "passport";
 import cookieparser from "cookie-parser";
 import "./config/middlewares/google.js"
-import bodyParser from "body-parser";
 //RUTAS
-import dashDuenos from "./routes/dashPaseadores.routes.js";
-import dashPaseadores from "./routes/dashDuenos.routes.js";
+import dashDueno from "./routes/dashDueno.routes.js";
 import home from "./routes/homepage.routes.js";
 
 
@@ -28,17 +26,17 @@ app.set("views",path.resolve(path.join(__dirname, "views")));
 
 //middleware
 app.use(express.static("./public"));
+app.use("/",home);
 app.use(passport.initialize());
 app.use(cookieparser());
-app.use(bodyParser.urlencoded({ extended: false }))
 
 //RUTAS
-app.use("/", home);
-app.use("/v1/dueno/", dashDuenos);
-app.use("/v1/paseador/", dashPaseadores);
+app.use("/v1/dueno", dashDueno);
+//app.use("/v1/paseador", dashPaseador);
 app.get("/", (req, res)=>{
     res.render("home");
-});
+})
+
 app.use("/auth", passport.authenticate("auth-google", {
     scope: [
         "https://www.googleapis.com/auth/userinfo.profile",

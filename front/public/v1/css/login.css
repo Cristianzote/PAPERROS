@@ -1,0 +1,84 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .container {
+	display: flex;
+	height: 100%;
+  }
+  
+  .login-form {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+  }
+  
+  .login-form h2 {
+	margin-top: 0;
+  }
+  
+  .login-form p {
+	margin-bottom: 20px;
+  }
+  
+  .form-field {
+	margin-bottom: 20px;
+	width: 100%;
+  }
+  
+  .form-field label {
+	display: block;
+	margin-bottom: 5px;
+  }
+  
+  .form-field input[type="text"],
+  .form-field input[type="password"] {
+	width: 100%;;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+  }
+  
+  .form-field input[type="checkbox"] {
+	margin-right: 5px;
+  }
+  
+  .form-field button {
+	padding: 15px 30px;
+	background-color: #4caf50;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+  }
+  
+  .signup-link {
+	margin-top: 20px;
+  }
+  
+  .signup-link a {
+	color: #4caf50;
+  }
+  
+  .image-container {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: stretch;
+	background-color: #f1f1f1;
+	overflow: hidden;
+  }
+  
+  .image-container img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+  }
+  

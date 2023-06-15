@@ -13,7 +13,7 @@ router.get('/users/:id', /*userController.isValidToken,*/ userController.getUser
 
 // U PUT
 router.put('/users/', /*userController.isValidToken,*/ userController.updateUser);
-router.put('/users/', /*userController.isValidToken,*/ userController.addDog);
+router.put('/addDog/', /*userController.isValidToken,*/ userController.addDog);
 
 // D Delete
 router.delete('/users/:id', /*userController.isValidToken,*/ userController.deleteUser);

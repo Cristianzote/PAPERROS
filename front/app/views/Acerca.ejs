@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs"); %>
+
+<body>
+
+    <%- include("./partials/menu.ejs"); %>
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="homepage/img/PerritoAcerca.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="border-start border-5 border-primary ps-5 mb-5">
+                        <h6 class="text-primary text-uppercase">Acerca de nosotros</h6>
+                        <h1 class="display-5 text-uppercase mb-0">Conoce nuestro proposito y quienes somos</h1>
+                    </div>
+                    <h4 class="text-body mb-4">Paperros nace de una necesidad y crece como una solucion.</h4>
+                    <div class="bg-light p-4">
+                        <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item w-50" role="presentation">
+                                <button class="nav-link text-uppercase w-100 active" id="pills-1-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1"
+                                    aria-selected="true">Nuestra Misión</button>
+                            </li>
+                            <li class="nav-item w-50" role="presentation">
+                                <button class="nav-link text-uppercase w-100" id="pills-2-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2"
+                                    aria-selected="false">Nuestra Visión</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                                <p class="mb-0">En Paperros, nuestra misión es brindar una plataforma innovadora y confiable que facilite la conexión 
+                                    entre dueños de perros y paseadores, promoviendo así paseos felices y seguros para perros felices. 
+                                    Nos dedicamos a fomentar una comunidad de amantes de los perros, 
+                                    donde los dueños puedan publicar sus solicitudes de paseo y los 
+                                    paseadores puedan encontrar estas oportunidades.</p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                                <p class="mb-0">En el año 2024, nuestra visión es convertir a Paperros en la plataforma líder a nivel mundial 
+                                    para la publicación de paseos por parte de dueños de perros y la conexión con paseadores calificados. 
+                                    Nos esforzamos por ser reconocidos como el referente de confianza en el cuidado de perros y paseos seguros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Team Start -->
+<div class="container-fluid py-5">
+    <h1 class="text-uppercase text-titulo text-center">Nuestro equipo Paperros</h1>
+        <div class="owl-carousel team-carousel owl-carousel-static d-flex justify-content-center" style="padding-right: 25px;">
+            <div class="team-item">
+                <div class="position-static overflow-hidden">
+                    <img class="img-fluid w-100" src="homepage/img/Testimonial-2.jpg" alt="">
+                    <div class="team-overlay">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-twitter"></i></a>
+                            <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-facebook"></i></a>
+                            <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light text-center p-4">
+                    <h5 class="text-uppercase">Emanuel Gomez</h5>
+                    <p class="m-0">Desarrollador</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <div class="position-static overflow-hidden">
+                    <img class="img-fluid w-100" src="homepage/img/Testimonial-1.jpg" alt="">
+                    <div class="team-overlay">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-twitter"></i></a>
+                            <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-facebook"></i></a>
+                            <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light text-center p-4">
+                    <h5 class="text-uppercase">Sofia Restrepo</h5>
+                    <p class="m-0">Desarrollador</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <div class="position-static overflow-hidden">
+                    <img class="img-fluid w-100" src="homepage/img/Testimonial-2.jpg" alt="">
+                    <div class="team-overlay">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-twitter"></i></a>
+                            <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-facebook"></i></a>
+                            <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light text-center p-4">
+                    <h5 class="text-uppercase">Cristian Ramirez</h5>
+                    <p class="m-0">Desarrollador</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+    <%- include("./partials/footer.ejs"); %>
+
+</body>
+
+</html>

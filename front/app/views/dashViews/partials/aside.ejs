@@ -1,0 +1,18 @@
+<div class="barra">
+  <h2>Menu<img src="/v1/img/lista_icono.png" alt=""></h2>
+  <% if ( rol == "dueno" ) { %>
+    <%# Aside del dueño %>
+    <ul>
+      <li><a href="/v1/dueno/MisPaseos">Mis paseos</a></li>
+      <li><a href="/v1/dueno/CrearPaseo">Crear paseo</a></li>
+      <li><a href="/v1/dueno/RutasPaseadores">Rutas de paseadores</a></li>
+      <li><a href="/v1/dueno/MisPerros">Mis perros</a></li>
+      <li><a href="/v1/dueno/perfil">Mi perfil</a></li>
+    </ul>
+  <% } else { %>
+    <%# Aside del paseador %>
+    <ul>
+    </ul>
+  <% } %>
+
+</div>
