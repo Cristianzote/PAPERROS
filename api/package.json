@@ -15,6 +15,11 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@babel/cli": "^7.22.5",
+        "@babel/core": "^7.22.5",
+        "@babel/node": "^7.22.5",
+        "@babel/plugin-transform-runtime": "^7.22.5",
+        "@babel/preset-env": "^7.22.5",
         "colors": "^1.4.0",
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
@@ -27,6 +32,7 @@
     },
     "devDependencies": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "@babel/cli": "^7.21.0",
         "@babel/core": "^7.21.0",
         "@babel/node": "^7.20.7",
@@ -38,6 +44,8 @@
         "@babel/node": "^7.22.1",
         "@babel/plugin-transform-runtime": "^7.22.5",
         "@babel/preset-env": "^7.22.4",
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         "nodemon": "^2.0.20"
     }

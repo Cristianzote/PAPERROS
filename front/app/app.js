@@ -10,7 +10,11 @@ import dash from "./routes/dashboard.routes.js"
 import passport from "passport";
 import cookieparser from "cookie-parser";
 import "./config/middlewares/google.js"
+<<<<<<< Updated upstream
 dotenv.config();
+=======
+import bodyParser from "body-parser";
+>>>>>>> Stashed changes
 
 //INICIALIZACION
 const app = express();
@@ -24,15 +28,19 @@ app.set("views",path.resolve(path.join(__dirname, "views")));
 
 //middleware
 app.use(express.static("./public"));
-app.use("/",home);
 app.use(passport.initialize());
 app.use(cookieparser());
+app.use(bodyParser.urlencoded({ extended: false }))
 
 //RUTAS
+<<<<<<< Updated upstream
+=======
+app.use("/", home);
+>>>>>>> Stashed changes
 app.use("/v1", dash);
 app.get("/", (req, res)=>{
     res.render("home");
-})
+});
 
 app.use("/auth", passport.authenticate("auth-google", {
     scope: [

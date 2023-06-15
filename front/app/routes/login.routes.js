@@ -16,7 +16,12 @@ loginRouter.get("/google", (req, res) => {
     };
     let token = jwt.sign(data, process.env.SECRET_KEY,{ "expiresIn": process.env.EXPIRE_TOKEN});
 
+<<<<<<< Updated upstream
     let timeExpireCookie = 3000 * 60 * process.env.EXPIRE_COOKIE;
+=======
+    //TODO: Arreglar seed del token
+    //let timeExpireCookie = 1000 * 60 * 5000 * process.env.EXPIRE_COOKIE;
+>>>>>>> Stashed changes
 
     res.cookie("token", token, {"maxAge": timeExpireCookie });
 
