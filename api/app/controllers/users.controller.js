@@ -96,7 +96,7 @@ export const getUsers = async(req, res) => {
 export const getUser = async(req, res) => {
     try {
         // Declarar datos del usuario
-        const id = req.body.id ?? "none";
+        const id = req.params.id ?? "none";
         // Declarar colección
         const result = db.collection('usuario').doc(id);
         const doc = await result.get();
@@ -189,7 +189,7 @@ export const addDog = async(req, res) => {
 export const deleteUser = async(req, res) => {
     try {
         // Datos del usuario
-        const user = { "id": req.body.id}
+        const user = { "id": req.params.id}
         
         // Declarar la colección
         const usuariosRef = db.collection('usuario');

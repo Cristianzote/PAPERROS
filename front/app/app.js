@@ -4,19 +4,17 @@ import dotenv from "dotenv";
 import ejs from "ejs";
 import path from "path";
 import { fileURLToPath } from 'url';
-import home from "./routes/homepage.routes.js";
 import { loginRouter } from "./routes/login.routes.js";
-import dash from "./routes/dashboard.routes.js"
 import passport from "passport";
 import cookieparser from "cookie-parser";
 import "./config/middlewares/google.js"
-<<<<<<< Updated upstream
-dotenv.config();
-=======
-import bodyParser from "body-parser";
->>>>>>> Stashed changes
+//RUTAS
+import dashDueno from "./routes/dashDueno.routes.js";
+import home from "./routes/homepage.routes.js";
+
 
 //INICIALIZACION
+dotenv.config();
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,19 +26,16 @@ app.set("views",path.resolve(path.join(__dirname, "views")));
 
 //middleware
 app.use(express.static("./public"));
+app.use("/",home);
 app.use(passport.initialize());
 app.use(cookieparser());
-app.use(bodyParser.urlencoded({ extended: false }))
 
 //RUTAS
-<<<<<<< Updated upstream
-=======
-app.use("/", home);
->>>>>>> Stashed changes
-app.use("/v1", dash);
+app.use("/v1/dueno", dashDueno);
+//app.use("/v1/paseador", dashPaseador);
 app.get("/", (req, res)=>{
     res.render("home");
-});
+})
 
 app.use("/auth", passport.authenticate("auth-google", {
     scope: [

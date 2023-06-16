@@ -1,5 +1,2 @@
+api/node_modules
 /front/node_modules
-/front/dist
-/api/node_modules
-/api/dist
-node_modules
