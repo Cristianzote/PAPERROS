@@ -29,6 +29,9 @@
     src: url("/v1/fonts/Cormorant-Light.ttf");
 }
 
+/* Mapa de Leaflet */
+#map { height: 400px; }
+
 h1 {
     font-family: "CormorantBold";
 }
