@@ -5,6 +5,106 @@ import 'node-fetch';
 
 const dash = Router();
 
+dash.get("/MisPaseos", (req, res)=>{
+    if(req.cookies.token){
+        try{
+            const token = jwt.verify(
+                req.cookies.token,
+                process.env.SECRET_KEY
+                )
+                let nombre = token.nombre;
+                let foto = token.foto;
+                
+                res.render("dashViews/MisPaseos",{
+                "rol": "dueno",
+                "nombre": nombre,
+                "foto": foto,
+                "mnu":0
+
+            });
+        } catch (error){
+            res.redirect("/Ingresa")
+        }
+    }else{
+        res.redirect("/Ingresa")
+    }
+});
+
+dash.get("/CrearPaseo", (req, res)=>{
+    if(req.cookies.token){
+        try{
+            const token = jwt.verify(
+                req.cookies.token,
+                process.env.SECRET_KEY
+                )
+                let nombre = token.nombre;
+                let foto = token.foto;
+                
+                res.render("dashViews/CrearPaseo",{
+                "rol": "dueno",
+                "nombre": nombre,
+                "foto": foto,
+                "mnu":0
+
+            });
+        } catch (error){
+            res.redirect("/Ingresa")
+        }
+    }else{
+        res.redirect("/Ingresa")
+    }
+});  
+
+dash.get("/RutasPaseadores", (req, res)=>{
+    if(req.cookies.token){
+        try{
+            const token = jwt.verify(
+                req.cookies.token,
+                process.env.SECRET_KEY
+                )
+                let nombre = token.nombre;
+                let foto = token.foto;
+                
+                res.render("dashViews/RutasPaseadores",{
+                "rol": "dueno",
+                "nombre": nombre,
+                "foto": foto,
+                "mnu":0
+
+            });
+        } catch (error){
+            res.redirect("/Ingresa")
+        }
+    }else{
+        res.redirect("/Ingresa")
+    }
+}); 
+
+dash.get("/AnadirPerro", (req, res)=>{
+    if(req.cookies.token){
+        try{
+            const token = jwt.verify(
+                req.cookies.token,
+                process.env.SECRET_KEY
+                )
+                let nombre = token.nombre;
+                let foto = token.foto;
+                
+                res.render("dashViews/AnadirPerro",{
+                "rol": "dueno",
+                "nombre": nombre,
+                "foto": foto,
+                "mnu":0
+
+            });
+        } catch (error){
+            res.redirect("/Ingresa")
+        }
+    }else{
+        res.redirect("/Ingresa")
+    }
+});  
+
 dash.get("/MisPerros", (req, res)=>{
     if(req.cookies.token){
         try{
@@ -30,7 +130,7 @@ dash.get("/MisPerros", (req, res)=>{
     }
 });
 
-dash.get("/MisPaseos", (req, res)=>{
+dash.get("/Perfil", (req, res)=>{
     if(req.cookies.token){
         try{
             const token = jwt.verify(
@@ -40,7 +140,7 @@ dash.get("/MisPaseos", (req, res)=>{
                 let nombre = token.nombre;
                 let foto = token.foto;
                 
-                res.render("dashViews/MisPaseos",{
+                res.render("dashViews/Perfil",{
                 "rol": "dueno",
                 "nombre": nombre,
                 "foto": foto,
@@ -53,7 +153,7 @@ dash.get("/MisPaseos", (req, res)=>{
     }else{
         res.redirect("/Ingresa")
     }
-});
+}); 
 
 dash.get("/salir", (req, res)=>{
     res.clearCookie("token");
