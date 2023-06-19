@@ -248,6 +248,54 @@ p {
 }
 
 .barra img {
+    color:rgb(0, 0, 0);
+    /**Alto y ancho de donde se va a activar cuando pase el mouse**/
+    width:10%;
+    height:9%;
+    /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
+    position:fixed;
+    /*Tiempo en el que va a transitar la animacion*/
+    transition: .6s all ;
+    /*este arriba de todo en la pantalla*/
+    z-index: 1;  
+}
+
+.barra ul{
+    /*solucionar espacios no deseados*/
+    padding:0px;
+    text-align: center;
+        
+}
+.barra  li{
+    /*Velocidad de transicion del contenido*/
+    transition:all .6s;
+    list-style: none; 
+}
+
+.barra a{
+    text-decoration: none;
+    
+    font-weight: normal;
+    
+    /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
+    transition: .3s all ;
+    /*Se ocultan los elementos*/
+    font-size: 0px;
+    padding:0px;
+}
+
+.barra  h2{
+    text-align: center;
+    font-family: 'CormorantLight';
+    color:rgb(0, 0, 0);
+    padding:7px;
+    padding-bottom:7px;
+
+    /*Se oculta el h2*/
+    font-size:0px;   
+}
+
+.barra img{
     padding-top: 10px;
     padding-left: 10px;
 }
@@ -304,6 +352,58 @@ p {
 
 /* FIN DEL CODIGO DEL ASIDE */
 
+
+.barra:hover{
+    /*Tamaño cuando el cursor señale la barra*/
+    width: 70%;
+    height: 100vh;
+    
+    /*Color*/
+    background: #ede9e5;
+}
+.barra:hover h2{
+    /*posicion dentro de barra del h2*/
+    padding:15px;
+    font-size: 35px;
+}
+.barra:hover a{ 
+    font-size:20px ;
+    color:rgb(0, 0, 0);
+    /*Se usa el display block para que el enlace respete el margin*/
+    display: block;
+    padding:20px;
+}
+.barra:hover img{
+    /*Desaparecer la imagen*/
+    height:0px;
+}
+
+.barra:hover li{
+    border-top:1px solid #03121b;
+    /*Espacios entre las lineas y el contenido*/
+    
+    width:100%;
+        
+}
+.barra:hover ul:last-of-type{
+
+
+    border-bottom: 1px solid #03121b;
+}
+
+.barra:hover a:hover{ 
+    font-size: 25px;
+    padding: 30px 0px; 
+    background: #a47559;  
+}
+
+@media (min-width: 768px){
+    .barra:hover{
+    width: 20%;
+    }
+}
+
+/* FIN DEL CODIGO DEL ASIDE */
 
 /* 
 
@@ -512,11 +612,13 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
         background: var(--primary);
         transition: .5s;
     }
+
     .navbar-light .navbar-nav .nav-link:hover::before,
     .navbar-light .navbar-nav .nav-link.active::before {
         width: 100%;
         left: 0;
     }
+
     .navbar-light .navbar-nav .nav-link.nav-contact::before {
         width: 100%;
         height: 1px;
@@ -535,6 +637,7 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
 .hero-header {
     background: url(../img/BULLDOGFOTO.png) top right/contain no-repeat;
 }
+
 
 .btn-play {
     position: relative;
@@ -596,6 +699,7 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
         opacity: 1;
     }
+
     100% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
         opacity: 0;
