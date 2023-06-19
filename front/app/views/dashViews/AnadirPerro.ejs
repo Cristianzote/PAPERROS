@@ -13,14 +13,15 @@
                 <p class="fs-4 text-parrafo text-center">
                     Adjunta la informacion de tu mascota para poder registrarla en Paperros
                 </p>
+                <form action="">
                 <div class="container ContainerAñadirPerro">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="TextoImagen">Añade una imagen de tu mascota:</label>
                                 <!-- PENDIENTE POR HACER EL FORMULARIO PARA SUBIR LA IMAGEN A LA DB-->
-                                <input type="file" id="imagenPerro" name="img" class="form-control">
-                                <img src="/v1/img/añadirImagenIcono.png" alt="Imagen" class="img-fluid">
+                                <input type="file" id="imagenPerro" name="img" class="form-control" placeholder="Elegir imagen">
+                                <img src="/v1/img/añadirImagenIcono2.png" alt="Imagen" class="imgAñadirPerro">
                             </div>
                             <div class="form-group">
                                 <input class="InputVacuna" type="text" id="vacunas" name="vacunas" class="form-control"
@@ -53,13 +54,13 @@
                     <div class="row ">
                         <div class="col-lg-12">
                             <div class="form-group a-center">
-                                <button class="btn btn-secondary BotonesAñadirPerro">Cancelar</button>
-                                <button class="btn btn-primary BotonesAñadirPerro">Subir</button>
+                                <button class="BotonCancelarPerro"><a class="aBotonHref" href="/v1/dueno/MisPerros">Cancelar</a></button>
+                                <button class="BotonSubirPerro">Subir</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
+            </form>
                 <%- include("./partials/footer.ejs"); %>
 
     </body>

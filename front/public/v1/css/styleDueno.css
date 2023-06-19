@@ -55,41 +55,99 @@ p {
     margin-right: 10px;
 }
 
-.TextoImagen{
-    margin-top: 10px
+.imgPerfilConfig{
+    max-width: 94%;
+    margin-bottom: 10px;
+    height: auto;
+} 
+
+.aBotonHref{
+    text-decoration: none;
+    color: #FFFFFF;
 }
+
+.aBotonHref:hover{
+    color: #000000;
+}
+
+.TextoImagen{
+    margin-top: 10px;
+    margin-left: 1px;
+}
+
+.InputDescripcionPaseo{
+    margin-top: 10px;
+    width: auto;
+    height: 44px;
+    min-width: 350px;
+    border-radius: 5px;
+    font-family: 'CormorantLight';
+    color: #927167;
+    font-size: 20px;
+    text-align: center;
+}
+
+.SeleccionPerros{
+    margin-top: 10px;
+    width: auto;
+    height: 44px;
+    min-width: 350px;
+    border-radius: 5px;
+    font-family: 'CormorantLight';
+    color: #927167;
+    font-size: 20px;
+    text-align: center;
+}
+
+.TextoMapa{
+    margin-top: 28px;
+    margin-left: 1px;
+}
+
 .BotonAñadir {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
+.InputFile{
+    width: 94%;
+    height: auto;
+    background-color: #dcbca9;
+}
+
 .InputsAñadirPerro {
-    margin-top: 55px;
+    margin-top: 52.7px;
     width: auto;
     display: flex;
     height: 44px;
     min-width: 350px;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
     margin-bottom: 15px;
+    border-radius: 5px;
+    font-family: 'CormorantLight';
+    color: #927167;
+    font-size: 20px;
+    text-align: center;
 }
 
 .InputVacuna {
-    margin-top: 3px;
+    margin-top: 5px;
+    text-align: center;
     width: auto;
     min-width: 350px;
     height: 44px;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+    border-radius: 5px;
+    font-family: 'CormorantLight';
+    color: #927167;
+    font-size: 20px;
+    
 }
 
 .ContainerAñadirPerro{
-    background-color: #eacab5;
+    background-color: #ebe5e5;
     max-width: 800px;
     height: auto;
+    border-radius: 20px;
 }
 
 .a-center{
@@ -100,14 +158,46 @@ p {
 
 }
 
-.BotonesAñadirPerro {
+.BotonSubirPerro {
     align-items: center;
     margin-top: 10px;
     flex-direction: column;
     margin-left: 20px;
     margin-bottom: 10px;
+    background-color: #a47559;
+    color: #F3F3F3;
+    font-family: 'CormorantLight';
+    font-size: 20px;
+    border-radius: 20px;
+    width: 100px;
 }
 
+.BotonSubirPerro:hover{
+    color: #000000;
+}
+
+.imgAñadirPerro{
+    max-width: 94%;
+    height: auto;
+}
+
+.BotonCancelarPerro {
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    background-color: #b5c8ad;
+    color: #F3F3F3;
+    font-size: 20px;
+    font-family: 'CormorantLight';
+    border-radius: 20px;
+    width: 100px;
+}
+
+.BotonCancelarPerro:hover{
+    color: #000000;
+}
 
 /* TODO EL CODIGO DEL ASIDE */
 

@@ -1,4 +1,6 @@
 <h1 class="display-1 text-titulo text-center">MIS PASEOS</h1>
+<% if ( rol == "dueno" ) { %>
+    <%# Mis paseos del dueño %>
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-12">
@@ -61,9 +63,12 @@
                     <!--ACA VA A IR UN INCLUDE DEL ESTADO DEL SERVICIO-->
                     <p class="card-text">Estado del servicio:</p>
                     <a href="#" class="btn btn-primary aBotonCarta1">Detalles</a>
-                    <div id="map"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<% } else { %>
+    <%# Mis paseos del paseador %>
+
+    <% } %>

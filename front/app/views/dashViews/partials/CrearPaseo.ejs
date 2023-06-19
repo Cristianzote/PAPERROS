@@ -1,0 +1,128 @@
+<% if ( rol == "dueno" ) { %>
+    <%# Crear Paseo dueño %>
+    <h1 class="text-uppercase text-titulo text-center">CREAR PASEO</h1>
+<p class="fs-4 text-parrafo text-center">
+    Adjunta la informacion de tu paseo para poder publicarla.
+</p>
+<form action="">
+<div class="container ContainerAñadirPerro">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="TextoMapa">Selecciona el lugar de paseo en el mapa:</label>
+                <div id="map"></div>
+            </div>
+            <div class="form-group">
+                <textarea class="InputDescripcionPaseo" name="Descripcion" id="Descripcion" cols="30" rows="10" placeholder="Descripcion"></textarea>
+            </div>
+            <div class="form-group">
+                <input class="SeleccionPerros" type="text" name="SelectPerro" id="SelectPerro" placeholder="Selecciona tus perros para el paseo"></input>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <input class="InputsAñadirPerro" type="text" id="Nombre" name="Nombre"
+                    class="form-control" placeholder="Nombre">
+            </div>
+            <div class="form-group ">
+                <input class="InputsAñadirPerro" type="date" id="Fecha " name="Fecha"
+                    class="form-control " placeholder="Fecha">
+            </div>
+            <div class="form-group ">
+                <input class="InputsAñadirPerro" type="time" id="Hora " name="Hora "
+                    class="form-control " placeholder="Hora">
+            </div>
+            <div class="form-group">
+                <input class="InputsAñadirPerro" type="text" id="Precio" name="Precio" class="form-control"
+                    placeholder="Precio por perro">
+            </div>
+            <div class="form-group">
+                <input class="InputsAñadirPerro" type="text" id="MetodoPago" name="MetodoPago" class="form-control"
+                    placeholder="Metodo para realizar el pago">
+            </div>
+            <div class="form-group">
+                <label class="TextoImagen">¿Desea repetir el paseo?</label>
+                <label class="TextoImagen">Todos los dias</label>
+                <input class="Checksboxes" type="checkbox" id="CheckboxPaseo" name="CheckboxPaseo" class="form-control">
+                <label class="TextoImagen">De lunes a viernes</label>
+                <input class="Checksboxes" type="checkbox" id="CheckboxPaseo2" name="CheckboxPaseo2" class="form-control">
+                <label class="TextoImagen">Solo por hoy</label>
+                <input class="Checksboxes" type="checkbox" id="CheckboxPaseo3" name="CheckboxPaseo3" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-lg-12">
+            <div class="form-group a-center">
+                <a href="/MisPerros">
+                <button class="BotonCancelarPerro">Cancelar</button>
+                </a>
+                <button class="BotonSubirPerro">Subir</button>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<% } else { %>
+    <%# Crear paseo paseador %>
+    <h1 class="text-uppercase text-titulo-paseador text-center">CREAR PASEO</h1>
+    <p class="fs-4 text-parrafo-paseador text-center">
+        Adjunta la informacion de tu paseo para poder publicarla.
+    </p>
+    <form action="">
+    <div class="container ContainerAñadirPerro">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="TextoMapa">Selecciona el lugar de paseo en el mapa:</label>
+                    <div id="map"></div>
+                </div>
+                <div class="form-group">
+                    <textarea class="InputDescripcionPaseo" name="Descripcion" id="Descripcion" cols="30" rows="10" placeholder="Descripcion"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <input class="InputsAñadirPerro" type="text" id="Nombre" name="Nombre"
+                        class="form-control" placeholder="Nombre">
+                </div>
+                <div class="form-group ">
+                    <input class="InputsAñadirPerro" type="date" id="Fecha " name="Fecha"
+                        class="form-control " placeholder="Fecha">
+                </div>
+                <div class="form-group ">
+                    <input class="InputsAñadirPerro" type="time" id="Hora " name="Hora "
+                        class="form-control " placeholder="Hora">
+                </div>
+                <div class="form-group">
+                    <input class="InputsAñadirPerro" type="text" id="Precio" name="Precio" class="form-control"
+                        placeholder="Precio por perro">
+                </div>
+                <div class="form-group">
+                    <input class="InputsAñadirPerro" type="text" id="MetodoPago" name="MetodoPago" class="form-control"
+                        placeholder="Metodo para realizar el pago">
+                </div>
+                <div class="form-group">
+                    <label class="TextoImagen">¿Desea repetir el paseo?</label>
+                    <label class="TextoImagen">Todos los dias</label>
+                    <input class="Checksboxes" type="checkbox" id="CheckboxPaseo" name="CheckboxPaseo" class="form-control">
+                    <label class="TextoImagen">De lunes a viernes</label>
+                    <input class="Checksboxes" type="checkbox" id="CheckboxPaseo2" name="CheckboxPaseo2" class="form-control">
+                    <label class="TextoImagen">Solo por hoy</label>
+                    <input class="Checksboxes" type="checkbox" id="CheckboxPaseo3" name="CheckboxPaseo3" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-lg-12">
+                <div class="form-group a-center">
+                    <a href="/MisPerros">
+                    <button class="BotonCancelarPerro">Cancelar</button>
+                    </a>
+                    <button class="BotonSubirPerro">Subir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+<% } %>

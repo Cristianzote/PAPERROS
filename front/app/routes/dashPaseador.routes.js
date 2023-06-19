@@ -16,7 +16,7 @@ dash.get("/MisPaseos", (req, res)=>{
                 let foto = token.foto;
                 
                 res.render("dashViews/MisPaseos",{
-                "rol": "dueno",
+                "rol": "paseador",
                 "nombre": nombre,
                 "foto": foto,
                 "mnu":0
@@ -41,7 +41,7 @@ dash.get("/CrearPaseo", (req, res)=>{
                 let foto = token.foto;
                 
                 res.render("dashViews/CrearPaseo",{
-                "rol": "dueno",
+                "rol": "paseador",
                 "nombre": nombre,
                 "foto": foto,
                 "mnu":0
@@ -55,7 +55,7 @@ dash.get("/CrearPaseo", (req, res)=>{
     }
 });  
 
-dash.get("/RutasPaseadores", (req, res)=>{
+dash.get("/PaseosPersonalizados", (req, res)=>{
     if(req.cookies.token){
         try{
             const token = jwt.verify(
@@ -65,58 +65,8 @@ dash.get("/RutasPaseadores", (req, res)=>{
                 let nombre = token.nombre;
                 let foto = token.foto;
                 
-                res.render("dashViews/RutasPaseadores",{
-                "rol": "dueno",
-                "nombre": nombre,
-                "foto": foto,
-                "mnu":0
-
-            });
-        } catch (error){
-            res.redirect("/Ingresa")
-        }
-    }else{
-        res.redirect("/Ingresa")
-    }
-}); 
-
-dash.get("/AnadirPerro", (req, res)=>{
-    if(req.cookies.token){
-        try{
-            const token = jwt.verify(
-                req.cookies.token,
-                process.env.SECRET_KEY
-                )
-                let nombre = token.nombre;
-                let foto = token.foto;
-                
-                res.render("dashViews/AnadirPerro",{
-                "rol": "dueno",
-                "nombre": nombre,
-                "foto": foto,
-                "mnu":0
-
-            });
-        } catch (error){
-            res.redirect("/Ingresa")
-        }
-    }else{
-        res.redirect("/Ingresa")
-    }
-});  
-
-dash.get("/MisPerros", (req, res)=>{
-    if(req.cookies.token){
-        try{
-            const token = jwt.verify(
-                req.cookies.token,
-                process.env.SECRET_KEY
-                )
-                let nombre = token.nombre;
-                let foto = token.foto;
-                
-                res.render("dashViews/MisPerros",{
-                "rol": "dueno",
+                res.render("dashViews/PaseosPersonalizados",{
+                "rol": "paseador",
                 "nombre": nombre,
                 "foto": foto,
                 "mnu":0
@@ -141,7 +91,7 @@ dash.get("/Configuracion", (req, res)=>{
                 let foto = token.foto;
                 
                 res.render("dashViews/Configuracion",{
-                "rol": "dueno",
+                "rol": "paseador",
                 "nombre": nombre,
                 "foto": foto,
                 "mnu":0
@@ -166,7 +116,7 @@ dash.get("/Perfil", (req, res)=>{
                 let foto = token.foto;
                 
                 res.render("dashViews/Perfil",{
-                "rol": "dueno",
+                "rol": "paseador",
                 "nombre": nombre,
                 "foto": foto,
                 "mnu":0

@@ -1,0 +1,91 @@
+<% if ( rol=="dueno" ) { %>
+    <%# Crear Paseo dueño %>
+    <h1 class="text-uppercase text-titulo text-center">CONFIGURACION DEL PERFIL</h1>
+    <p class="fs-4 text-parrafo text-center">
+        Digita la informacion solicitada para actualizar tu perfil
+    </p>
+    <form action="">
+        <div class="container ContainerAñadirPerro">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="TextoImagen">Añade una imagen de perfil:</label>
+                        <!-- PENDIENTE POR HACER EL FORMULARIO PARA SUBIR LA IMAGEN A LA DB-->
+                        <input type="file" id="imagenPerro" name="img" class="form-control"
+                            placeholder="Elegir imagen">
+                        <img src="/v1/img/añadirImagenIcono2.png" alt="Imagen" class="imgPerfilConfig">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input class="InputsAñadirPerro" type="text" id="NombreUsuario" name="NombreUsuario"
+                            class="form-control" placeholder="Nombre Completo">
+                    </div>
+                    <div class="form-group ">
+                        <input class="InputsAñadirPerro" type="text" id="DireccionUsuario "
+                            name="DireccionUsuario" class="form-control " placeholder="Direccion">
+                    </div>
+                    <div class="row ">
+                        <div class="col-lg-12">
+                            <div class="form-group a-center">
+                                    <button class="BotonCancelarPerro"><a class="aBotonHref" href="/v1/dueno/perfil">Cancelar</a</button>
+                                <button class="BotonSubirPerro">Subir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </form>
+        <% } else { %>
+            <%# Crear paseo paseador %>
+                <h1 class="text-uppercase text-titulo-paseador text-center">CONFIGURACION DEL PERFIL</h1>
+                <p class="fs-4 text-parrafo-paseador text-center">
+                    Digita la informacion solicitada para actualizar tu perfil
+                </p>
+                <form action="">
+                    <div class="container ContainerAñadirPerro">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="TextoImagen">Añade una imagen de perfil:</label>
+                                    <!-- PENDIENTE POR HACER EL FORMULARIO PARA SUBIR LA IMAGEN A LA DB-->
+                                    <input type="file" id="imagenPerro" name="img" class="form-control"
+                                        placeholder="Elegir imagen">
+                                    <img src="/v1/img/añadirImagenIcono2.png" alt="Imagen" class="imgPerfilConfig">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="InputDescripcionPaseo" name="DescripcionUsuarioPaseador" id="DescripcionUsuarioPaseador"
+                                        cols="30" rows="10" placeholder="Descripcion"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input class="InputsAñadirPerro" type="text" id="NombreUsuario" name="NombreUsuario"
+                                        class="form-control" placeholder="Nombre Completo">
+                                </div>
+                                <div class="form-group ">
+                                    <input class="InputsAñadirPerro" type="number" id="NumPaseador "
+                                        name="NumPaseador" class="form-control " placeholder="Numero telefonico">
+                                </div>
+                                <div class="form-group ">
+                                    <input class="InputsAñadirPerro" type="text" id="CuentaBancariaPaseador"
+                                        name="CuentaBancariaPaseador" class="form-control " placeholder="Cuenta Bancaria">
+                                </div>
+                                <div class="form-group ">
+                                    <input class="InputsAñadirPerro" type="text" id="CorreoPaseador"
+                                        name="CorreoPaseador" class="form-control " placeholder="Correo Electronico">
+                                </div>
+                                <div class="form-group ">
+                                    <input class="InputsAñadirPerro" type="text" id="CiudadPaseador"
+                                        name="CiudadPaseador" class="form-control " placeholder="Ciudad de residencia">
+                                </div>
+                                <div class="row ">
+                                    <div class="col-lg-12">
+                                        <div class="form-group a-center">
+                                                <button class="BotonCancelarPerro"><a class="aBotonHref" href="/v1/paseador/perfil">Cancelar</a</button>
+                                            <button class="BotonSubirPerro">Subir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </form>
+                <% } %>
