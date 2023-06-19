@@ -248,54 +248,6 @@ p {
 }
 
 .barra img {
-    color:rgb(0, 0, 0);
-    /**Alto y ancho de donde se va a activar cuando pase el mouse**/
-    width:10%;
-    height:9%;
-    /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
-    position:fixed;
-    /*Tiempo en el que va a transitar la animacion*/
-    transition: .6s all ;
-    /*este arriba de todo en la pantalla*/
-    z-index: 1;  
-}
-
-.barra ul{
-    /*solucionar espacios no deseados*/
-    padding:0px;
-    text-align: center;
-        
-}
-.barra  li{
-    /*Velocidad de transicion del contenido*/
-    transition:all .6s;
-    list-style: none; 
-}
-
-.barra a{
-    text-decoration: none;
-    
-    font-weight: normal;
-    
-    /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
-    transition: .3s all ;
-    /*Se ocultan los elementos*/
-    font-size: 0px;
-    padding:0px;
-}
-
-.barra  h2{
-    text-align: center;
-    font-family: 'CormorantLight';
-    color:rgb(0, 0, 0);
-    padding:7px;
-    padding-bottom:7px;
-
-    /*Se oculta el h2*/
-    font-size:0px;   
-}
-
-.barra img{
     padding-top: 10px;
     padding-left: 10px;
 }
@@ -304,18 +256,18 @@ p {
     /*Tamaño cuando el cursor señale la barra*/
     width: 70%;
     height: 100vh;
+
     /*Color*/
-    background: #ede8e4;
+    background: #e2e9e0;
 }
-
-.barra:hover h2 {
+.barra:hover h2{
     /*posicion dentro de barra del h2*/
-    padding: 15px;
+    padding:15px;
     font-size: 35px;
-}
 
-.barra:hover a {
-    font-size: 20px;
+}
+.barra:hover a{ 
+    font-size:20px ;
     color: rgb(0, 0, 0);
     /*Se usa el display block para que el enlace respete el margin*/
     display: block;
@@ -337,13 +289,13 @@ p {
     border-bottom: 1px solid #03121b;
 }
 
-.barra:hover a:hover {
+.barra:hover a:hover{ 
     font-size: 25px;
-    padding: 30px 0px;
-    background: #a47559;
+    padding: 30px 0px; 
+    background: #c5c5c5;  
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px){
     .barra:hover {
         width: 20%;
     }
@@ -352,58 +304,6 @@ p {
 
 /* FIN DEL CODIGO DEL ASIDE */
 
-
-.barra:hover{
-    /*Tamaño cuando el cursor señale la barra*/
-    width: 70%;
-    height: 100vh;
-    
-    /*Color*/
-    background: #ede9e5;
-}
-.barra:hover h2{
-    /*posicion dentro de barra del h2*/
-    padding:15px;
-    font-size: 35px;
-}
-.barra:hover a{ 
-    font-size:20px ;
-    color:rgb(0, 0, 0);
-    /*Se usa el display block para que el enlace respete el margin*/
-    display: block;
-    padding:20px;
-}
-.barra:hover img{
-    /*Desaparecer la imagen*/
-    height:0px;
-}
-
-.barra:hover li{
-    border-top:1px solid #03121b;
-    /*Espacios entre las lineas y el contenido*/
-    
-    width:100%;
-        
-}
-.barra:hover ul:last-of-type{
-
-
-    border-bottom: 1px solid #03121b;
-}
-
-.barra:hover a:hover{ 
-    font-size: 25px;
-    padding: 30px 0px; 
-    background: #a47559;  
-}
-
-@media (min-width: 768px){
-    .barra:hover{
-    width: 20%;
-    }
-}
-
-/* FIN DEL CODIGO DEL ASIDE */
 
 /* 
 
@@ -483,15 +383,12 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
     padding: 5px 10px;
     background-color: #b5c8ad;
     color: rgb(0, 0, 0);
-    background-color: #a47559;
-    color: white;
     text-decoration: none;
     border-radius: 26px
 }
 
 .aBoton:hover {
     color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
 }
 
 .aTitulo {
@@ -500,7 +397,6 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
     text-decoration: none;
     padding: 5px 10px;
     color: #b5c8ad;
-    color: #ab6033;
     font-size: 26.6667px;
 }
 
@@ -510,7 +406,6 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
     text-decoration: none;
     padding: 5px 10px;
     color: #b5c8ad;
-    color: #ab6033;
     font-size: 26.6667px;
 }
 
@@ -539,7 +434,6 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
 
 .aBarra:hover {
     color: #b5c8ad;
-    color: #ab6033;
 }
 
 .btn {
@@ -618,13 +512,11 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
         background: var(--primary);
         transition: .5s;
     }
-
     .navbar-light .navbar-nav .nav-link:hover::before,
     .navbar-light .navbar-nav .nav-link.active::before {
         width: 100%;
         left: 0;
     }
-
     .navbar-light .navbar-nav .nav-link.nav-contact::before {
         width: 100%;
         height: 1px;
@@ -643,7 +535,6 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
 .hero-header {
     background: url(../img/BULLDOGFOTO.png) top right/contain no-repeat;
 }
-
 
 .btn-play {
     position: relative;
@@ -705,7 +596,6 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
         opacity: 1;
     }
-
     100% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
         opacity: 0;
@@ -979,6 +869,68 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
 .blog-item a:hover i::after {
     width: 50px;
 }
+.text-parrafo-p{
+    color:#b5c8ad !important
+
+}
+.display-1-paseador{
+    color: #b5c8ad !important;
+    font-size:calc(1.625rem + 4.5vw);
+    font-weight:700;
+    line-height:1.2
+}
+
+.historialtitle-paseador{
+    color: #b5c8ad !important;
+    font-family: "CormorantMedium";
+    font-size: 25px;
+    display: grid;
+}
+.menupaseador{
+    background-color: #e2e9e0;
+}
+.tab-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.tab-content {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-details-p {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+    margin: 20px;
+}
+.titulosperfilpaseador-title{
+    font-family: "CormorantMedium";
+    font-size: 40px;
+    display: grid;
+    color:  #b5c8ad !important;
+}
+.titulosperfilpaseador{
+    font-family: "CormorantLight";
+    font-size: 25px;
+    color:  #323232 !important;
+    justify-content: flex-start;
+}
 
 .text-parrafo-paseador{
     color:#b5c8ad
@@ -987,3 +939,4 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
 .text-titulo-paseador{
     color:#b5c8ad
 }
+

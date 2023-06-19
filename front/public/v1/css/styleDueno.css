@@ -46,36 +46,36 @@ p {
     font-style: normal;
 }
 
-#map{
+#map {
     height: 200px;
 }
 
-.ImagenPerfil{
+.ImagenPerfil {
     border-radius: 40px;
     margin-right: 10px;
 }
 
-.imgPerfilConfig{
+.imgPerfilConfig {
     max-width: 94%;
     margin-bottom: 10px;
     height: auto;
-} 
+}
 
-.aBotonHref{
+.aBotonHref {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-.aBotonHref:hover{
+.aBotonHref:hover {
     color: #000000;
 }
 
-.TextoImagen{
+.TextoImagen {
     margin-top: 10px;
     margin-left: 1px;
 }
 
-.InputDescripcionPaseo{
+.InputDescripcionPaseo {
     margin-top: 10px;
     width: auto;
     height: 44px;
@@ -87,7 +87,7 @@ p {
     text-align: center;
 }
 
-.SeleccionPerros{
+.SeleccionPerros {
     margin-top: 10px;
     width: auto;
     height: 44px;
@@ -99,7 +99,7 @@ p {
     text-align: center;
 }
 
-.TextoMapa{
+.TextoMapa {
     margin-top: 28px;
     margin-left: 1px;
 }
@@ -110,7 +110,7 @@ p {
     flex-direction: column;
 }
 
-.InputFile{
+.InputFile {
     width: 94%;
     height: auto;
     background-color: #dcbca9;
@@ -140,17 +140,17 @@ p {
     font-family: 'CormorantLight';
     color: #927167;
     font-size: 20px;
-    
+
 }
 
-.ContainerAñadirPerro{
+.ContainerAñadirPerro {
     background-color: #ebe5e5;
     max-width: 800px;
     height: auto;
     border-radius: 20px;
 }
 
-.a-center{
+.a-center {
 
     display: flex;
     align-items: center;
@@ -172,11 +172,11 @@ p {
     width: 100px;
 }
 
-.BotonSubirPerro:hover{
+.BotonSubirPerro:hover {
     color: #000000;
 }
 
-.imgAñadirPerro{
+.imgAñadirPerro {
     max-width: 94%;
     height: auto;
 }
@@ -195,7 +195,7 @@ p {
     width: 100px;
 }
 
-.BotonCancelarPerro:hover{
+.BotonCancelarPerro:hover {
     color: #000000;
 }
 
@@ -248,54 +248,6 @@ p {
 }
 
 .barra img {
-    color:rgb(0, 0, 0);
-    /**Alto y ancho de donde se va a activar cuando pase el mouse**/
-    width:10%;
-    height:9%;
-    /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
-    position:fixed;
-    /*Tiempo en el que va a transitar la animacion*/
-    transition: .6s all ;
-    /*este arriba de todo en la pantalla*/
-    z-index: 1;  
-}
-
-.barra ul{
-    /*solucionar espacios no deseados*/
-    padding:0px;
-    text-align: center;
-        
-}
-.barra  li{
-    /*Velocidad de transicion del contenido*/
-    transition:all .6s;
-    list-style: none; 
-}
-
-.barra a{
-    text-decoration: none;
-    
-    font-weight: normal;
-    
-    /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
-    transition: .3s all ;
-    /*Se ocultan los elementos*/
-    font-size: 0px;
-    padding:0px;
-}
-
-.barra  h2{
-    text-align: center;
-    font-family: 'CormorantLight';
-    color:rgb(0, 0, 0);
-    padding:7px;
-    padding-bottom:7px;
-
-    /*Se oculta el h2*/
-    font-size:0px;   
-}
-
-.barra img{
     padding-top: 10px;
     padding-left: 10px;
 }
@@ -352,58 +304,6 @@ p {
 
 /* FIN DEL CODIGO DEL ASIDE */
 
-
-.barra:hover{
-    /*Tamaño cuando el cursor señale la barra*/
-    width: 70%;
-    height: 100vh;
-    
-    /*Color*/
-    background: #ede9e5;
-}
-.barra:hover h2{
-    /*posicion dentro de barra del h2*/
-    padding:15px;
-    font-size: 35px;
-}
-.barra:hover a{ 
-    font-size:20px ;
-    color:rgb(0, 0, 0);
-    /*Se usa el display block para que el enlace respete el margin*/
-    display: block;
-    padding:20px;
-}
-.barra:hover img{
-    /*Desaparecer la imagen*/
-    height:0px;
-}
-
-.barra:hover li{
-    border-top:1px solid #03121b;
-    /*Espacios entre las lineas y el contenido*/
-    
-    width:100%;
-        
-}
-.barra:hover ul:last-of-type{
-
-
-    border-bottom: 1px solid #03121b;
-}
-
-.barra:hover a:hover{ 
-    font-size: 25px;
-    padding: 30px 0px; 
-    background: #a47559;  
-}
-
-@media (min-width: 768px){
-    .barra:hover{
-    width: 20%;
-    }
-}
-
-/* FIN DEL CODIGO DEL ASIDE */
 
 /* 
 
@@ -637,7 +537,6 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
 .hero-header {
     background: url(../img/BULLDOGFOTO.png) top right/contain no-repeat;
 }
-
 
 .btn-play {
     position: relative;
@@ -972,4 +871,125 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
 
 .blog-item a:hover i::after {
     width: 50px;
+}
+
+.container-profile {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.profile-image-dog {
+    width: 100%;
+    height: auto;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h2 {
+    margin-top: 0;
+}
+
+.profile-details p {
+    margin-bottom: 10px;
+}
+
+.addfile {
+    width: 50px;
+    height: 50px;
+}
+
+.nametext {
+    font-size: 35px;
+}
+
+.descriptiontext {
+    font-size: 25px;
+}
+
+.historialtitle {
+    font-family: "CormorantMedium";
+    font-size: 25px;
+    display: grid;
+}
+
+.small-container {
+    display: grid;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+
+.big-container {
+    display: inline-block;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+.boton-profile {
+    font-family: "CormorantLight";
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #dfe5dc;
+    text-decoration: none;
+    border-radius: 5px
+}
+
+.row-profile {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+    justify-content: center;
+}
+
+.card1 {
+    margin-left: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: false
+}
+
+.boton-vermas {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #282525;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.misperrostitle {
+    font-family: "CormorantMedium";
+    font-size: 25px;
+    display: grid;
+    justify-content: space-around;
 }
