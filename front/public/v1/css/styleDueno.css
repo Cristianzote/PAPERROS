@@ -721,3 +721,114 @@ CODIGO OPCIONAL POR SI HAY PROBLEMAS DE DISEÑO O SE PREFIERE ESTE DISEÑO
 .blog-item a:hover i::after {
     width: 50px;
 }
+/* css perfil */
+
+.container-profile {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.profile-image-dog {
+    width: 100%;
+    height: auto;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h2 {
+    margin-top: 0;
+}
+
+.profile-details p {
+    margin-bottom: 10px;
+}
+.addfile{
+    width: 50px;
+    height: 50px;
+}
+.nametext{
+    font-size: 35px;
+}
+.descriptiontext{
+    font-size: 25px;
+}
+.historialtitle{
+    font-family: "CormorantMedium";
+    font-size: 25px;
+    display: grid;
+}
+.small-container{
+    display: grid;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    width: 150px; 
+    height: 150px;
+}
+.big-container{
+    display: inline-block;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+    width: 150px; 
+    height: 150px;
+    padding: 10px;
+}
+
+.boton-profile {
+    font-family: "CormorantLight";
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #dfe5dc;
+    text-decoration: none;
+    border-radius: 5px
+}
+.row-profile{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+    justify-content: center;
+}
+.card1{
+    margin-left: 20px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    min-width:0;word-wrap:break-word;
+    background-color:#fff;
+    background-clip:border-box;
+    border:1px solid rgba(0,0,0,0.125);
+    border-radius:false
+}
+.boton-vermas{
+  display: block;
+  text-align: center;
+  margin: 10px;
+  padding: 10px 20px;
+  color: #282525;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.misperrostitle{
+    font-family: "CormorantMedium";
+    font-size: 25px;
+    display: grid;
+    justify-content: space-around;
+}

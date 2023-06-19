@@ -1,0 +1,128 @@
+<% if ( rol=="dueno" ) { %>
+  <%# Aside del dueño %>
+    <h1 class="display-1 text-titulo text-center">MI PERFIL</h1>
+    </div>
+    <div class="container-profile">
+      <div class="profile-image">
+        <img class="profile-image" src="<%= foto %>" height="300px" alt="Foto de perfil">
+        <!--<form method="POST" enctype="multipart/form-data">
+      <input type="file" name="foto" accept="image/*">
+      <input type="submit" value="Cambiar foto"> -->
+        </form>
+        <br>
+        <p class="historialtitle">HISTORIAL DE PASEOS: </p>
+        <div class="container">
+          <div class="row-profile">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card1">
+                <div class="card-body">
+                  <!--ACA VA A IR UN INCLUDE DEL TITULO DEL SERVICIO-->
+                  <p class="card-text">TITULO DEL SERVICIO</p>
+                  <!--MOSTRAR UN MODAL O UNA ALERTA CON TODA LA INFORMACION, TRAER LOS DATOS DE LA BASE DE DATOS
+                        Y MOSTRARLOS CON ALGUN FRAMEWORK-->
+                  <!--ACA VA A IR UN INCLUDE DEL PRECIO DEL SERVICIO-->
+                  <p class="card-text">Precio del servicio:</p>
+                  <!--ACA VA A IR UN INCLUDE DEL ESTADO DEL SERVICIO-->
+                  <p class="card-text">Estado del servicio:</p>
+                  <a href="#" class="boton-profile">Detalles</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card1">
+                <div class="card-body">
+                  <!--ACA VA A IR UN INCLUDE DEL TITULO DEL SERVICIO-->
+                  <p class="card-text">TITULO DEL SERVICIO</p>
+                  <!--ACA VA A IR UN INCLUDE DEL PRECIO DEL SERVICIO-->
+                  <p class="card-text">Precio del servicio:</p>
+                  <!--ACA VA A IR UN INCLUDE DEL ESTADO DEL SERVICIO-->
+                  <p class="card-text">Estado del servicio:</p>
+                  <a href="#" class="boton-profile">Detalles</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card1">
+                <div class="card-body">
+                  <!--ACA VA A IR UN INCLUDE DEL TITULO DEL SERVICIO-->
+                  <p class="card-text">TITULO DEL SERVICIO</p>
+                  <!--ACA VA A IR UN INCLUDE DEL PRECIO DEL SERVICIO-->
+                  <p class="card-text">Precio del servicio:</p>
+                  <!--ACA VA A IR UN INCLUDE DEL ESTADO DEL SERVICIO-->
+                  <p class="card-text">Estado del servicio:</p>
+                  <a href="#" class="boton-profile">Detalles</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card1">
+                <div class="card-body">
+                  <!--ACA VA A IR UN INCLUDE DEL TITULO DEL SERVICIO-->
+                  <p class="card-text">TITULO DEL SERVICIO</p>
+                  <!--ACA VA A IR UN INCLUDE DEL PRECIO DEL SERVICIO-->
+                  <p class="card-text">Precio del servicio:</p>
+                  <!--ACA VA A IR UN INCLUDE DEL ESTADO DEL SERVICIO-->
+                  <p class="card-text">Estado del servicio:</p>
+                  <a href="#" class="boton-profile">Detalles</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="/MisPaseos" class="boton-vermas">Ver mas</a>
+        </div>
+      </div>
+
+      <div class="profile-details">
+        <h2 class="text-parrafo text-center nametext">
+          <%= nombre %>
+        </h2>
+        <p class="descriptiontext">CRA 39 E #48 F SUR - ENVIGADO - URBANIZACION LA CUENCA</p>
+        <p class="misperrostitle">MIS PERROS: </p>
+        <div class="container">
+          <div class="row-profile">
+            <br>
+
+            <div class="small-container">
+              <img class="profile-image-dog" src="/v1/img/bulldog1.jpeg" alt="Imagen">
+              <a href="#" class="boton-profile">Ver</a>
+            </div>
+            <br>
+            <div class="small-container">
+              <img class="profile-image-dog" src="/v1/img/bulldog1.jpeg" alt="Imagen">
+              <a href="#" class="boton-profile">Ver</a>
+            </div>
+            <br>
+            <div class="small-container">
+              <img class="profile-image-dog" src="/v1/img/bulldog1.jpeg" alt="Imagen">
+              <a href="#" class="boton-profile">Ver</a>
+            </div>
+          </div>
+        </div>
+        <a href="/MisPerros" class="boton-vermas">Ver mas</a>
+      </div>
+
+
+      
+      <% } else { %>
+        <%# Aside del paseador %>
+          <h1 class="display-1-paseador text-titulo text-center">MI PERFIL</h1>
+          <div class="tab-container">
+            <div class="tab-content">
+                <img class="profile-details-p" "<%= foto %>" alt="Foto de perfil">
+              <h2 class="titulosperfilpaseador-title"> Paseador de Mascotas</h2>
+              <div class="profile-details">
+
+                <p class="titulosperfilpaseador"><strong>Nombre:</strong>
+                  <%= nombre %>
+                </p>
+                <p class="titulosperfilpaseador"><strong>Correo Electrónico:</strong>
+                </p>
+                <p class="titulosperfilpaseador"><strong>Teléfono:</strong> 
+                </p>             
+                <p class="titulosperfilpaseador"><strong>Cuenta de transferencia:</strong>
+                </p>
+                <!-- Agrega más detalles del perfil del paseador aquí -->
+              </div>
+            </div>
+          </div>
+          <% } %>
